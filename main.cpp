@@ -45,10 +45,20 @@ int main() {
 
     for (int i = a1; i <= h8; i++) {
         enumSquare E = static_cast<enumSquare>(i);
-        if (E % 8 == 0 && E != 0) {
+        if (E % 8 == 0 && E != a1) {
             cout << endl;
         }
         cout << E << " ";
     }
+    cout << endl << endl;
+    // enumSquare S = static_cast<enumSquare>();
+
+    cout << b1.white_pawns << endl;
+    b1.set_bit(b1.white_pawns, 8ULL);
+
+    cout << b1.get_bit(b1.white_pawns, 8ULL) << endl;
+    cout << b1.get_bit(b1.white_pawns, 9ULL) << endl;
+    // cout << b1.white_pawns << endl;
+
     return 0;
 }

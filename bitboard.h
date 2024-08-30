@@ -4,7 +4,7 @@ using namespace std;
 #ifndef Bitboard_H_INCLUDE_
 #define Bitboard_H_INCLUDE_
 
-typedef unsigned long long U64;
+typedef uint64_t U64;
 
 enum enumSquare {
   a1, b1, c1, d1, e1, f1, g1, h1,
@@ -19,37 +19,29 @@ enum enumSquare {
 
 class Bitboard {
     private:
-        void initBitboards() {
-            // white_pawns
-            // white_rooks
-            // white_bishops
-            // white_knights
-            // white_queen
-            // white_king
-            // black_pawns
-            // black_rooks
-            // black_bishops
-            // black_knights
-            // black_queen
-            // black_king
-        }
+    int turn_to_move;
 
     public:
         Bitboard();
         ~Bitboard();
+        void set_bit(U64 &piece, int square);
+        void clear_bit(U64 &piece, int square);
+        bool get_bit(U64 piece, int square);
+
+        void initBitboards();
 
         U64 white_pawns;
         U64 white_rooks;
         U64 white_bishops;
         U64 white_knights;
-        U64 white_queen;
+        U64 white_queens;
         U64 white_king;
 
         U64 black_pawns;
         U64 black_rooks;
         U64 black_bishops;
         U64 black_knights;
-        U64 black_queen;
+        U64 black_queens;
         U64 black_king;
 };
 
