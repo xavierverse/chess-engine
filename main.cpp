@@ -41,6 +41,14 @@ void print_squares() {
 }
 int main() {
     Bitboard b1;
-    print_squares();
+    // print_squares();
+
+    for (int i = a1; i <= h8; i++) {
+        enumSquare E = static_cast<enumSquare>(i);
+        if (E % 8 == 0 && E != 0) {
+            cout << endl;
+        }
+        cout << E << " ";
+    }
     return 0;
 }
