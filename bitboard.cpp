@@ -40,7 +40,7 @@ bool Bitboard::get_bit(U64 piece, int square) {
 }
 
 // Note : 63 is MSB. 0 is LSB
-// Therefore, 63 is top right and 0 is bottom left
+// 63 is top right (H8) and 0 is bottom left (A1)
 void Bitboard::initBitboards() {
     white_pawns = 0x0000000000FF00ULL;
     white_rooks = 0x00000000000081ULL;
